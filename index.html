@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Classroom Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-container">
+
+  <div class="lecture-section">
+    <h1>AI-Powered Live Lecture Assistant</h1>
+
+    <button id="start-btn" onclick="startSpeech()">
+      Start Lecture
+    </button>
+
+    <h2>Live Lecture Text</h2>
+
+    <div id="output" class="lecture-text">
+      Waiting for lecturer to speak...
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Student Camera</h2>
+
+    <video id="video" autoplay></video>
+
+    <h2>Gesture Status</h2>
+
+    <div id="gestureOutput" class="not-detected">
+      No gesture detected
+    </div>
+  </div>
+
+</div> <!-- END main-container -->
+
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.9.0/dist/tf.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>

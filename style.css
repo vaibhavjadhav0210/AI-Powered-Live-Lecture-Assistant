@@ -1,0 +1,125 @@
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(120deg, #e0eafc, #cfdef3);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+/* Main layout */
+.main-container {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+/* Card UI */
+.card {
+  background: white;
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 360px;
+}
+
+/* Video */
+video {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+}
+
+/* Gesture Output */
+#gestureOutput {
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* No Gesture */
+.not-detected {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 2px solid #dc3545;
+}
+
+/* Gesture Detected */
+.detected {
+  background-color: #d4edda;
+  color: #155724;
+  border: 2px solid #28a745;
+  animation: pulse 1.2s infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(40, 167, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+}
+
+/* Lecture Text Section */
+.lecture-section {
+  max-width: 600px;
+  margin-left: 40px;
+}
+
+/* Highlighted Live Text Box */
+.lecture-text {
+  margin-top: 15px;
+  padding: 20px;
+  min-height: 120px;
+  background-color: #ffffff;
+  border-left: 6px solid #007bff;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Smooth text appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button style */
+#start-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+#start-btn:hover {
+  background-color: #0056b3;
+}
+.caption {
+  margin-bottom: 8px;
+  animation: fadeIn 0.3s ease-in-out;
+}
